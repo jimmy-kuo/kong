@@ -84,9 +84,9 @@ local healthchecks_defaults = {
     },
     unhealthy = {
       http_statuses = { 429, 500, 503 },
-      tcp_failures = 2,
-      timeouts = 7,
-      http_failures = 5,
+      tcp_failures = 0,  -- 0 = circuit-breaker disabled by default
+      timeouts = 0,      -- 0 = circuit-breaker disabled by default
+      http_failures = 0, -- 0 = circuit-breaker disabled by default
     },
   },
 }
